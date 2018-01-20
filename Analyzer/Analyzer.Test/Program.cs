@@ -10,6 +10,7 @@ namespace Analyzer.Test
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("ss");
         }
     }
 }
