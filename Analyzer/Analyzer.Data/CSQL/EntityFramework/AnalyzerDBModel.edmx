@@ -13,7 +13,49 @@
     <edmx:ConceptualModels>
       <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="AnalyzerDBModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
         <EntityContainer Name="AnalyzerDBContext" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="T_Price" EntityType="AnalyzerDBModel.T_Price" />
+          <EntitySet Name="T_EPS" EntityType="AnalyzerDBModel.T_EPS" />
+          <EntitySet Name="T_EPS_Audited" EntityType="AnalyzerDBModel.T_EPS_Audited" />
         </EntityContainer>
+        <EntityType Name="T_Price">
+          <Key>
+            <PropertyRef Name="OId" />
+          </Key>
+          <Property Name="OId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Year" Type="Int32" Nullable="false" />
+          <Property Name="Quarter" Type="Int32" Nullable="false" />
+          <Property Name="COCR" Type="String" Nullable="false" />
+          <Property Name="PARQ" Type="String" Nullable="false" />
+          <Property Name="LALU" Type="String" Nullable="false" />
+          <Property Name="REXP" Type="String" Nullable="false" />
+          <Property Name="CCS" Type="String" Nullable="false" />
+        </EntityType>
+        <EntityType Name="T_EPS">
+          <Key>
+            <PropertyRef Name="OId" />
+          </Key>
+          <Property Name="OId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Year" Type="Int32" Nullable="false" />
+          <Property Name="Quarter" Type="Int32" Nullable="false" />
+          <Property Name="COCR" Type="String" Nullable="false" />
+          <Property Name="PARQ" Type="String" Nullable="false" />
+          <Property Name="LALU" Type="String" Nullable="false" />
+          <Property Name="REXP" Type="String" Nullable="false" />
+          <Property Name="CCS" Type="String" Nullable="false" />
+        </EntityType>
+        <EntityType Name="T_EPS_Audited">
+          <Key>
+            <PropertyRef Name="OId" />
+          </Key>
+          <Property Name="OId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Year" Type="Int32" Nullable="false" />
+          <Property Name="Quarter" Type="Int32" Nullable="false" />
+          <Property Name="COCR" Type="String" Nullable="false" />
+          <Property Name="PARQ" Type="String" Nullable="false" />
+          <Property Name="LALU" Type="String" Nullable="false" />
+          <Property Name="REXP" Type="String" Nullable="false" />
+          <Property Name="CCS" Type="String" Nullable="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
