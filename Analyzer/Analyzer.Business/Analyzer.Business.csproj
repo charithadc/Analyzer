@@ -4,16 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{09919400-ED8C-484B-AD0E-D5325231FCFF}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>Analyzer.Test</RootNamespace>
-    <AssemblyName>Analyzer.Test</AssemblyName>
+    <ProjectGuid>{3D45696E-39E5-42E1-9A68-65D02CFB2639}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Analyzer.Business</RootNamespace>
+    <AssemblyName>Analyzer.Business</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -42,16 +40,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="Manager.cs" />
+    <Compile Include="MatricCalc\StackDataRepo.cs" />
+    <Compile Include="MatricCalc\StackDatedDataRepo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <Folder Include="MatricCalc\Generic\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Analyzer.Business\Analyzer.Business.csproj">
-      <Project>{3d45696e-39e5-42e1-9a68-65d02cfb2639}</Project>
-      <Name>Analyzer.Business</Name>
+    <ProjectReference Include="..\Analyzer.Data\Analyzer.Data.csproj">
+      <Project>{866a546f-b360-4f85-8672-735b7abfb370}</Project>
+      <Name>Analyzer.Data</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -769,6 +769,42 @@ namespace Analyzer.Data.CSQL
                 ;
             }
         }
+
+        public List<T_Price> GetPriceFromDB()
+        {
+            using (var db = new AnalyzerDBContext())
+            {
+                var query = from b in db.T_Price
+                            orderby b.Year descending, b.Quarter descending
+                            select b;
+                List<T_Price> pirceLst = query.ToList();
+                return pirceLst;
+            }
+        }
+
+        public List<T_EPS> GetEPSFromDB()
+        {
+            using (var db = new AnalyzerDBContext())
+            {
+                var query = from b in db.T_EPS
+                            orderby b.Year descending, b.Quarter descending
+                            select b;
+                List<T_EPS> epsLst = query.ToList();
+                return epsLst;
+            }
+        }
+
+        public List<T_EPS_Audited> GetEPSAuditedFromDB()
+        {
+            using (var db = new AnalyzerDBContext())
+            {
+                var query = from b in db.T_EPS_Audited
+                            orderby b.Year descending, b.Quarter descending
+                            select b;
+                List<T_EPS_Audited> epsAuditedLst = query.ToList();
+                return epsAuditedLst;
+            }
+        }
     }
 
     public enum TableNames { T_Price, T_EPS, T_EPS_Audited, All }
