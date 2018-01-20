@@ -57,6 +57,25 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AnalyzerDBModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="CSQL\EntityFramework\AnalyzerModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AnalyzerModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CSQL\EntityFramework\AnalyzerModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AnalyzerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CSQL\EntityFramework\T_EPS.cs">
+      <DependentUpon>AnalyzerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CSQL\EntityFramework\T_EPS_Audited.cs">
+      <DependentUpon>AnalyzerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CSQL\EntityFramework\T_Price.cs">
+      <DependentUpon>AnalyzerModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Excel\CExcelFile.cs" />
     <Compile Include="Excel\Reader.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -82,6 +101,21 @@
       <DependentUpon>AnalyzerDBModel.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CSQL\EntityFramework\AnalyzerModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>AnalyzerModel.Context.cs</LastGenOutput>
+      <DependentUpon>AnalyzerDBModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="CSQL\EntityFramework\AnalyzerModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>AnalyzerModel.cs</LastGenOutput>
+      <DependentUpon>AnalyzerDBModel.edmx</DependentUpon>
+    </Content>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
