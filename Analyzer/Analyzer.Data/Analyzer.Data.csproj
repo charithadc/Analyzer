@@ -52,15 +52,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CSQL\DAOImpl.cs" />
+    <Compile Include="CSQL\EntityFramework\AnalyzerDBModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AnalyzerDBModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CSQL\EntityFramework\AnalyzerDBModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AnalyzerDBModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="CSQL\EntityFramework\AnalyzerDBModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>AnalyzerDBModel.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="CSQL\EntityFramework\AnalyzerModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>AnalyzerModel.Context.tt</DependentUpon>
     </Compile>
     <Compile Include="CSQL\EntityFramework\AnalyzerModel.cs">
       <AutoGen>True</AutoGen>
@@ -106,9 +112,15 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="CSQL\EntityFramework\AnalyzerModel.Context.tt">
+    <Content Include="CSQL\EntityFramework\AnalyzerDBModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>AnalyzerModel.Context.cs</LastGenOutput>
+      <LastGenOutput>AnalyzerDBModel.Context.cs</LastGenOutput>
+      <DependentUpon>AnalyzerDBModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="CSQL\EntityFramework\AnalyzerDBModel.edmx.sql" />
+    <Content Include="CSQL\EntityFramework\AnalyzerDBModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>AnalyzerDBModel.cs</LastGenOutput>
       <DependentUpon>AnalyzerDBModel.edmx</DependentUpon>
     </Content>
     <Content Include="CSQL\EntityFramework\AnalyzerModel.tt">

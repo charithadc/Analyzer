@@ -12,7 +12,8 @@ namespace Analyzer.Data.CSQL.EntityFramework
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
-    
+    using SqlProviderServices = System.Data.Entity.SqlServer.SqlProviderServices;
+
     public partial class AnalyzerDBContext : DbContext
     {
         public AnalyzerDBContext()

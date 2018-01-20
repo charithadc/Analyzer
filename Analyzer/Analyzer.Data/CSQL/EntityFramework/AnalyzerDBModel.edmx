@@ -4,11 +4,253 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl" Namespace="AnalyzerDBModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005">
-        <EntityContainer Name="AnalyzerDBModelTargetContainer" >
-        </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+    <Schema Namespace="AnalyzerDBModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="AnalyzerDBModelStoreContainer">
+    <EntitySet Name="T_Price" EntityType="AnalyzerDBModel.Store.T_Price" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="T_EPS" EntityType="AnalyzerDBModel.Store.T_EPS" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="T_EPS_Audited" EntityType="AnalyzerDBModel.Store.T_EPS_Audited" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="T_Price">
+    <Key>
+      <PropertyRef Name="OId" />
+    </Key>
+    <Property Name="OId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Year" Type="int" Nullable="false" />
+    <Property Name="Quarter" Type="int" Nullable="false" />
+    <Property Name="COCR" Type="float" Nullable="true" />
+    <Property Name="PARQ" Type="float" Nullable="true" />
+    <Property Name="LALU" Type="float" Nullable="true" />
+    <Property Name="REXP" Type="float" Nullable="true" />
+    <Property Name="CCS" Type="float" Nullable="true" />
+    <Property Name="KDL" Type="float" Nullable="true" />
+    <Property Name="SOY" Type="float" Nullable="true" />
+    <Property Name="HHL" Type="float" Nullable="true" />
+    <Property Name="SEYB" Type="float" Nullable="true" />
+    <Property Name="CDB" Type="float" Nullable="true" />
+    <Property Name="LFIN" Type="float" Nullable="true" />
+    <Property Name="LWL" Type="float" Nullable="true" />
+    <Property Name="CIND" Type="float" Nullable="true" />
+    <Property Name="DIPD" Type="float" Nullable="true" />
+    <Property Name="LOLC" Type="float" Nullable="true" />
+    <Property Name="NDB" Type="float" Nullable="true" />
+    <Property Name="ACL" Type="float" Nullable="true" />
+    <Property Name="SAMP" Type="float" Nullable="true" />
+    <Property Name="TPL" Type="float" Nullable="true" />
+    <Property Name="CFIN" Type="float" Nullable="true" />
+    <Property Name="RCL" Type="float" Nullable="true" />
+    <Property Name="DIMO" Type="float" Nullable="true" />
+    <Property Name="BLI" Type="float" Nullable="true" />
+    <Property Name="REG" Type="float" Nullable="true" />
+    <Property Name="ALUF" Type="float" Nullable="true" />
+    <Property Name="ARPI" Type="float" Nullable="true" />
+    <Property Name="HDFC" Type="float" Nullable="true" />
+    <Property Name="COLO" Type="float" Nullable="true" />
+    <Property Name="VFIN" Type="float" Nullable="true" />
+    <Property Name="PMB" Type="float" Nullable="true" />
+    <Property Name="CRL" Type="float" Nullable="true" />
+    <Property Name="TJL" Type="float" Nullable="true" />
+    <Property Name="GRAN" Type="float" Nullable="true" />
+    <Property Name="TAFL" Type="float" Nullable="true" />
+    <Property Name="UML" Type="float" Nullable="true" />
+    <Property Name="HAYL" Type="float" Nullable="true" />
+    <Property Name="AAIC" Type="float" Nullable="true" />
+    <Property Name="HNB" Type="float" Nullable="true" />
+    <Property Name="BRWN" Type="float" Nullable="true" />
+    <Property Name="CIC" Type="float" Nullable="true" />
+    <Property Name="DIST" Type="float" Nullable="true" />
+    <Property Name="LION" Type="float" Nullable="true" />
+    <Property Name="LGL" Type="float" Nullable="true" />
+    <Property Name="NTB" Type="float" Nullable="true" />
+    <Property Name="DFCC" Type="float" Nullable="true" />
+    <Property Name="SUN" Type="float" Nullable="true" />
+    <Property Name="LLUB" Type="float" Nullable="true" />
+    <Property Name="TYRE" Type="float" Nullable="true" />
+    <Property Name="ASIR" Type="float" Nullable="true" />
+    <Property Name="CARG" Type="float" Nullable="true" />
+    <Property Name="LHCL" Type="float" Nullable="true" />
+    <Property Name="BFL" Type="float" Nullable="true" />
+    <Property Name="NEST" Type="float" Nullable="true" />
+    <Property Name="GUAR" Type="float" Nullable="true" />
+    <Property Name="CTC" Type="float" Nullable="true" />
+    <Property Name="KAPI" Type="float" Nullable="true" />
+    <Property Name="JKH" Type="float" Nullable="true" />
+    <Property Name="LIOC" Type="float" Nullable="true" />
+    <Property Name="CLND" Type="float" Nullable="true" />
+    <Property Name="AHUN" Type="float" Nullable="true" />
+    <Property Name="TKYO" Type="float" Nullable="true" />
+    <Property Name="SPEN" Type="float" Nullable="true" />
+    <Property Name="COMB" Type="float" Nullable="true" />
+    <Property Name="MELS" Type="float" Nullable="true" />
+    <Property Name="SLTL" Type="float" Nullable="true" />
+    <Property Name="CTHR" Type="float" Nullable="true" />
+    <Property Name="CARS" Type="float" Nullable="true" />
+    <Property Name="CINS" Type="float" Nullable="true" />
+    <Property Name="AEL" Type="float" Nullable="true" />
+    <Property Name="BUKI" Type="float" Nullable="true" />
+    <Property Name="AHPL" Type="float" Nullable="true" />
+    <Property Name="SINS" Type="float" Nullable="true" />
+  </EntityType>
+  <EntityType Name="T_EPS">
+    <Key>
+      <PropertyRef Name="OId" />
+    </Key>
+    <Property Name="OId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Year" Type="int" Nullable="false" />
+    <Property Name="Quarter" Type="int" Nullable="false" />
+    <Property Name="COCR" Type="float" Nullable="true" />
+    <Property Name="PARQ" Type="float" Nullable="true" />
+    <Property Name="LALU" Type="float" Nullable="true" />
+    <Property Name="REXP" Type="float" Nullable="true" />
+    <Property Name="CCS" Type="float" Nullable="true" />
+    <Property Name="KDL" Type="float" Nullable="true" />
+    <Property Name="SOY" Type="float" Nullable="true" />
+    <Property Name="HHL" Type="float" Nullable="true" />
+    <Property Name="SEYB" Type="float" Nullable="true" />
+    <Property Name="CDB" Type="float" Nullable="true" />
+    <Property Name="LFIN" Type="float" Nullable="true" />
+    <Property Name="LWL" Type="float" Nullable="true" />
+    <Property Name="CIND" Type="float" Nullable="true" />
+    <Property Name="DIPD" Type="float" Nullable="true" />
+    <Property Name="LOLC" Type="float" Nullable="true" />
+    <Property Name="NDB" Type="float" Nullable="true" />
+    <Property Name="ACL" Type="float" Nullable="true" />
+    <Property Name="SAMP" Type="float" Nullable="true" />
+    <Property Name="TPL" Type="float" Nullable="true" />
+    <Property Name="CFIN" Type="float" Nullable="true" />
+    <Property Name="RCL" Type="float" Nullable="true" />
+    <Property Name="DIMO" Type="float" Nullable="true" />
+    <Property Name="BLI" Type="float" Nullable="true" />
+    <Property Name="REG" Type="float" Nullable="true" />
+    <Property Name="ALUF" Type="float" Nullable="true" />
+    <Property Name="ARPI" Type="float" Nullable="true" />
+    <Property Name="HDFC" Type="float" Nullable="true" />
+    <Property Name="COLO" Type="float" Nullable="true" />
+    <Property Name="VFIN" Type="float" Nullable="true" />
+    <Property Name="PMB" Type="float" Nullable="true" />
+    <Property Name="CRL" Type="float" Nullable="true" />
+    <Property Name="TJL" Type="float" Nullable="true" />
+    <Property Name="GRAN" Type="float" Nullable="true" />
+    <Property Name="TAFL" Type="float" Nullable="true" />
+    <Property Name="UML" Type="float" Nullable="true" />
+    <Property Name="HAYL" Type="float" Nullable="true" />
+    <Property Name="AAIC" Type="float" Nullable="true" />
+    <Property Name="HNB" Type="float" Nullable="true" />
+    <Property Name="BRWN" Type="float" Nullable="true" />
+    <Property Name="CIC" Type="float" Nullable="true" />
+    <Property Name="DIST" Type="float" Nullable="true" />
+    <Property Name="LION" Type="float" Nullable="true" />
+    <Property Name="LGL" Type="float" Nullable="true" />
+    <Property Name="NTB" Type="float" Nullable="true" />
+    <Property Name="DFCC" Type="float" Nullable="true" />
+    <Property Name="SUN" Type="float" Nullable="true" />
+    <Property Name="LLUB" Type="float" Nullable="true" />
+    <Property Name="TYRE" Type="float" Nullable="true" />
+    <Property Name="ASIR" Type="float" Nullable="true" />
+    <Property Name="CARG" Type="float" Nullable="true" />
+    <Property Name="LHCL" Type="float" Nullable="true" />
+    <Property Name="BFL" Type="float" Nullable="true" />
+    <Property Name="NEST" Type="float" Nullable="true" />
+    <Property Name="GUAR" Type="float" Nullable="true" />
+    <Property Name="CTC" Type="float" Nullable="true" />
+    <Property Name="KAPI" Type="float" Nullable="true" />
+    <Property Name="JKH" Type="float" Nullable="true" />
+    <Property Name="LIOC" Type="float" Nullable="true" />
+    <Property Name="CLND" Type="float" Nullable="true" />
+    <Property Name="AHUN" Type="float" Nullable="true" />
+    <Property Name="TKYO" Type="float" Nullable="true" />
+    <Property Name="SPEN" Type="float" Nullable="true" />
+    <Property Name="COMB" Type="float" Nullable="true" />
+    <Property Name="MELS" Type="float" Nullable="true" />
+    <Property Name="SLTL" Type="float" Nullable="true" />
+    <Property Name="CTHR" Type="float" Nullable="true" />
+    <Property Name="CARS" Type="float" Nullable="true" />
+    <Property Name="CINS" Type="float" Nullable="true" />
+    <Property Name="AEL" Type="float" Nullable="true" />
+    <Property Name="BUKI" Type="float" Nullable="true" />
+    <Property Name="AHPL" Type="float" Nullable="true" />
+    <Property Name="SINS" Type="float" Nullable="true" />
+  </EntityType>
+  <EntityType Name="T_EPS_Audited">
+    <Key>
+      <PropertyRef Name="OId" />
+    </Key>
+    <Property Name="OId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Year" Type="int" Nullable="false" />
+    <Property Name="Quarter" Type="int" Nullable="false" />
+    <Property Name="COCR" Type="float" Nullable="true" />
+    <Property Name="PARQ" Type="float" Nullable="true" />
+    <Property Name="LALU" Type="float" Nullable="true" />
+    <Property Name="REXP" Type="float" Nullable="true" />
+    <Property Name="CCS" Type="float" Nullable="true" />
+    <Property Name="KDL" Type="float" Nullable="true" />
+    <Property Name="SOY" Type="float" Nullable="true" />
+    <Property Name="HHL" Type="float" Nullable="true" />
+    <Property Name="SEYB" Type="float" Nullable="true" />
+    <Property Name="CDB" Type="float" Nullable="true" />
+    <Property Name="LFIN" Type="float" Nullable="true" />
+    <Property Name="LWL" Type="float" Nullable="true" />
+    <Property Name="CIND" Type="float" Nullable="true" />
+    <Property Name="DIPD" Type="float" Nullable="true" />
+    <Property Name="LOLC" Type="float" Nullable="true" />
+    <Property Name="NDB" Type="float" Nullable="true" />
+    <Property Name="ACL" Type="float" Nullable="true" />
+    <Property Name="SAMP" Type="float" Nullable="true" />
+    <Property Name="TPL" Type="float" Nullable="true" />
+    <Property Name="CFIN" Type="float" Nullable="true" />
+    <Property Name="RCL" Type="float" Nullable="true" />
+    <Property Name="DIMO" Type="float" Nullable="true" />
+    <Property Name="BLI" Type="float" Nullable="true" />
+    <Property Name="REG" Type="float" Nullable="true" />
+    <Property Name="ALUF" Type="float" Nullable="true" />
+    <Property Name="ARPI" Type="float" Nullable="true" />
+    <Property Name="HDFC" Type="float" Nullable="true" />
+    <Property Name="COLO" Type="float" Nullable="true" />
+    <Property Name="VFIN" Type="float" Nullable="true" />
+    <Property Name="PMB" Type="float" Nullable="true" />
+    <Property Name="CRL" Type="float" Nullable="true" />
+    <Property Name="TJL" Type="float" Nullable="true" />
+    <Property Name="GRAN" Type="float" Nullable="true" />
+    <Property Name="TAFL" Type="float" Nullable="true" />
+    <Property Name="UML" Type="float" Nullable="true" />
+    <Property Name="HAYL" Type="float" Nullable="true" />
+    <Property Name="AAIC" Type="float" Nullable="true" />
+    <Property Name="HNB" Type="float" Nullable="true" />
+    <Property Name="BRWN" Type="float" Nullable="true" />
+    <Property Name="CIC" Type="float" Nullable="true" />
+    <Property Name="DIST" Type="float" Nullable="true" />
+    <Property Name="LION" Type="float" Nullable="true" />
+    <Property Name="LGL" Type="float" Nullable="true" />
+    <Property Name="NTB" Type="float" Nullable="true" />
+    <Property Name="DFCC" Type="float" Nullable="true" />
+    <Property Name="SUN" Type="float" Nullable="true" />
+    <Property Name="LLUB" Type="float" Nullable="true" />
+    <Property Name="TYRE" Type="float" Nullable="true" />
+    <Property Name="ASIR" Type="float" Nullable="true" />
+    <Property Name="CARG" Type="float" Nullable="true" />
+    <Property Name="LHCL" Type="float" Nullable="true" />
+    <Property Name="BFL" Type="float" Nullable="true" />
+    <Property Name="NEST" Type="float" Nullable="true" />
+    <Property Name="GUAR" Type="float" Nullable="true" />
+    <Property Name="CTC" Type="float" Nullable="true" />
+    <Property Name="KAPI" Type="float" Nullable="true" />
+    <Property Name="JKH" Type="float" Nullable="true" />
+    <Property Name="LIOC" Type="float" Nullable="true" />
+    <Property Name="CLND" Type="float" Nullable="true" />
+    <Property Name="AHUN" Type="float" Nullable="true" />
+    <Property Name="TKYO" Type="float" Nullable="true" />
+    <Property Name="SPEN" Type="float" Nullable="true" />
+    <Property Name="COMB" Type="float" Nullable="true" />
+    <Property Name="MELS" Type="float" Nullable="true" />
+    <Property Name="SLTL" Type="float" Nullable="true" />
+    <Property Name="CTHR" Type="float" Nullable="true" />
+    <Property Name="CARS" Type="float" Nullable="true" />
+    <Property Name="CINS" Type="float" Nullable="true" />
+    <Property Name="AEL" Type="float" Nullable="true" />
+    <Property Name="BUKI" Type="float" Nullable="true" />
+    <Property Name="AHPL" Type="float" Nullable="true" />
+    <Property Name="SINS" Type="float" Nullable="true" />
+  </EntityType>
+</Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="AnalyzerDBModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
@@ -24,12 +266,79 @@
           <Property Name="OId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Year" Type="Int32" Nullable="false" />
           <Property Name="Quarter" Type="Int32" Nullable="false" />
-          <Property Name="COCR" Type="String" Nullable="false" />
-          <Property Name="PARQ" Type="String" Nullable="false" />
-          <Property Name="LALU" Type="String" Nullable="false" />
-          <Property Name="REXP" Type="String" Nullable="false" />
-          <Property Name="CCS" Type="String" Nullable="false" />
-        </EntityType>
+          <Property Name="COCR" Type="Double" Nullable="true" />
+          <Property Name="PARQ" Type="Double" Nullable="true" />
+          <Property Name="LALU" Type="Double" Nullable="true" />
+          <Property Name="REXP" Type="Double" Nullable="true" />
+          <Property Name="CCS" Type="Double" Nullable="true" />
+          <Property Name="KDL" Type="Double" Nullable="true" />
+          <Property Name="SOY" Type="Double" Nullable="true" />
+          <Property Name="HHL" Type="Double" Nullable="true" />
+          <Property Name="SEYB" Type="Double" Nullable="true" />
+          <Property Name="CDB" Type="Double" Nullable="true" />
+          <Property Name="LFIN" Type="Double" Nullable="true" />
+          <Property Name="LWL" Type="Double" Nullable="true" />
+          <Property Name="CIND" Type="Double" Nullable="true" />
+          <Property Name="DIPD" Type="Double" Nullable="true" />
+          <Property Name="LOLC" Type="Double" Nullable="true" />
+          <Property Name="NDB" Type="Double" Nullable="true" />
+          <Property Name="ACL" Type="Double" Nullable="true" />
+          <Property Name="SAMP" Type="Double" Nullable="true" />
+          <Property Name="TPL" Type="Double" Nullable="true" />
+          <Property Name="CFIN" Type="Double" Nullable="true" />
+          <Property Name="RCL" Type="Double" Nullable="true" />
+          <Property Name="DIMO" Type="Double" Nullable="true" />
+          <Property Name="BLI" Type="Double" Nullable="true" />
+          <Property Name="REG" Type="Double" Nullable="true" />
+          <Property Name="ALUF" Type="Double" Nullable="true" />
+          <Property Name="ARPI" Type="Double" Nullable="true" />
+          <Property Name="HDFC" Type="Double" Nullable="true" />
+          <Property Name="COLO" Type="Double" Nullable="true" />
+          <Property Name="VFIN" Type="Double" Nullable="true" />
+          <Property Name="PMB" Type="Double" Nullable="true" />
+          <Property Name="CRL" Type="Double" Nullable="true" />
+          <Property Name="TJL" Type="Double" Nullable="true" />
+          <Property Name="GRAN" Type="Double" Nullable="true" />
+          <Property Name="TAFL" Type="Double" Nullable="true" />
+          <Property Name="UML" Type="Double" Nullable="true" />
+          <Property Name="HAYL" Type="Double" Nullable="true" />
+          <Property Name="AAIC" Type="Double" Nullable="true" />
+          <Property Name="HNB" Type="Double" Nullable="true" />
+          <Property Name="BRWN" Type="Double" Nullable="true" />
+          <Property Name="CIC" Type="Double" Nullable="true" />
+          <Property Name="DIST" Type="Double" Nullable="true" />
+          <Property Name="LION" Type="Double" Nullable="true" />
+          <Property Name="LGL" Type="Double" Nullable="true" />
+          <Property Name="NTB" Type="Double" Nullable="true" />
+          <Property Name="DFCC" Type="Double" Nullable="true" />
+          <Property Name="SUN" Type="Double" Nullable="true" />
+          <Property Name="LLUB" Type="Double" Nullable="true" />
+          <Property Name="TYRE" Type="Double" Nullable="true" />
+          <Property Name="ASIR" Type="Double" Nullable="true" />
+          <Property Name="CARG" Type="Double" Nullable="true" />
+          <Property Name="LHCL" Type="Double" Nullable="true" />
+          <Property Name="BFL" Type="Double" Nullable="true" />
+          <Property Name="NEST" Type="Double" Nullable="true" />
+          <Property Name="GUAR" Type="Double" Nullable="true" />
+          <Property Name="CTC" Type="Double" Nullable="true" />
+          <Property Name="KAPI" Type="Double" Nullable="true" />
+          <Property Name="JKH" Type="Double" Nullable="true" />
+          <Property Name="LIOC" Type="Double" Nullable="true" />
+          <Property Name="CLND" Type="Double" Nullable="true" />
+          <Property Name="AHUN" Type="Double" Nullable="true" />
+          <Property Name="TKYO" Type="Double" Nullable="true" />
+          <Property Name="SPEN" Type="Double" Nullable="true" />
+          <Property Name="COMB" Type="Double" Nullable="true" />
+          <Property Name="MELS" Type="Double" Nullable="true" />
+          <Property Name="SLTL" Type="Double" Nullable="true" />
+          <Property Name="CTHR" Type="Double" Nullable="true" />
+          <Property Name="CARS" Type="Double" Nullable="true" />
+          <Property Name="CINS" Type="Double" Nullable="true" />
+          <Property Name="AEL" Type="Double" Nullable="true" />
+          <Property Name="BUKI" Type="Double" Nullable="true" />
+          <Property Name="AHPL" Type="Double" Nullable="true" />
+          <Property Name="SINS" Type="Double" Nullable="true" />
+          </EntityType>
         <EntityType Name="T_EPS">
           <Key>
             <PropertyRef Name="OId" />
@@ -37,11 +346,78 @@
           <Property Name="OId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Year" Type="Int32" Nullable="false" />
           <Property Name="Quarter" Type="Int32" Nullable="false" />
-          <Property Name="COCR" Type="String" Nullable="false" />
-          <Property Name="PARQ" Type="String" Nullable="false" />
-          <Property Name="LALU" Type="String" Nullable="false" />
-          <Property Name="REXP" Type="String" Nullable="false" />
-          <Property Name="CCS" Type="String" Nullable="false" />
+          <Property Name="COCR" Type="Double" Nullable="true" />
+          <Property Name="PARQ" Type="Double" Nullable="true" />
+          <Property Name="LALU" Type="Double" Nullable="true" />
+          <Property Name="REXP" Type="Double" Nullable="true" />
+          <Property Name="CCS" Type="Double" Nullable="true" />
+          <Property Name="KDL" Type="Double" Nullable="true" />
+          <Property Name="SOY" Type="Double" Nullable="true" />
+          <Property Name="HHL" Type="Double" Nullable="true" />
+          <Property Name="SEYB" Type="Double" Nullable="true" />
+          <Property Name="CDB" Type="Double" Nullable="true" />
+          <Property Name="LFIN" Type="Double" Nullable="true" />
+          <Property Name="LWL" Type="Double" Nullable="true" />
+          <Property Name="CIND" Type="Double" Nullable="true" />
+          <Property Name="DIPD" Type="Double" Nullable="true" />
+          <Property Name="LOLC" Type="Double" Nullable="true" />
+          <Property Name="NDB" Type="Double" Nullable="true" />
+          <Property Name="ACL" Type="Double" Nullable="true" />
+          <Property Name="SAMP" Type="Double" Nullable="true" />
+          <Property Name="TPL" Type="Double" Nullable="true" />
+          <Property Name="CFIN" Type="Double" Nullable="true" />
+          <Property Name="RCL" Type="Double" Nullable="true" />
+          <Property Name="DIMO" Type="Double" Nullable="true" />
+          <Property Name="BLI" Type="Double" Nullable="true" />
+          <Property Name="REG" Type="Double" Nullable="true" />
+          <Property Name="ALUF" Type="Double" Nullable="true" />
+          <Property Name="ARPI" Type="Double" Nullable="true" />
+          <Property Name="HDFC" Type="Double" Nullable="true" />
+          <Property Name="COLO" Type="Double" Nullable="true" />
+          <Property Name="VFIN" Type="Double" Nullable="true" />
+          <Property Name="PMB" Type="Double" Nullable="true" />
+          <Property Name="CRL" Type="Double" Nullable="true" />
+          <Property Name="TJL" Type="Double" Nullable="true" />
+          <Property Name="GRAN" Type="Double" Nullable="true" />
+          <Property Name="TAFL" Type="Double" Nullable="true" />
+          <Property Name="UML" Type="Double" Nullable="true" />
+          <Property Name="HAYL" Type="Double" Nullable="true" />
+          <Property Name="AAIC" Type="Double" Nullable="true" />
+          <Property Name="HNB" Type="Double" Nullable="true" />
+          <Property Name="BRWN" Type="Double" Nullable="true" />
+          <Property Name="CIC" Type="Double" Nullable="true" />
+          <Property Name="DIST" Type="Double" Nullable="true" />
+          <Property Name="LION" Type="Double" Nullable="true" />
+          <Property Name="LGL" Type="Double" Nullable="true" />
+          <Property Name="NTB" Type="Double" Nullable="true" />
+          <Property Name="DFCC" Type="Double" Nullable="true" />
+          <Property Name="SUN" Type="Double" Nullable="true" />
+          <Property Name="LLUB" Type="Double" Nullable="true" />
+          <Property Name="TYRE" Type="Double" Nullable="true" />
+          <Property Name="ASIR" Type="Double" Nullable="true" />
+          <Property Name="CARG" Type="Double" Nullable="true" />
+          <Property Name="LHCL" Type="Double" Nullable="true" />
+          <Property Name="BFL" Type="Double" Nullable="true" />
+          <Property Name="NEST" Type="Double" Nullable="true" />
+          <Property Name="GUAR" Type="Double" Nullable="true" />
+          <Property Name="CTC" Type="Double" Nullable="true" />
+          <Property Name="KAPI" Type="Double" Nullable="true" />
+          <Property Name="JKH" Type="Double" Nullable="true" />
+          <Property Name="LIOC" Type="Double" Nullable="true" />
+          <Property Name="CLND" Type="Double" Nullable="true" />
+          <Property Name="AHUN" Type="Double" Nullable="true" />
+          <Property Name="TKYO" Type="Double" Nullable="true" />
+          <Property Name="SPEN" Type="Double" Nullable="true" />
+          <Property Name="COMB" Type="Double" Nullable="true" />
+          <Property Name="MELS" Type="Double" Nullable="true" />
+          <Property Name="SLTL" Type="Double" Nullable="true" />
+          <Property Name="CTHR" Type="Double" Nullable="true" />
+          <Property Name="CARS" Type="Double" Nullable="true" />
+          <Property Name="CINS" Type="Double" Nullable="true" />
+          <Property Name="AEL" Type="Double" Nullable="true" />
+          <Property Name="BUKI" Type="Double" Nullable="true" />
+          <Property Name="AHPL" Type="Double" Nullable="true" />
+          <Property Name="SINS" Type="Double" Nullable="true" />
         </EntityType>
         <EntityType Name="T_EPS_Audited">
           <Key>
@@ -50,23 +426,330 @@
           <Property Name="OId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Year" Type="Int32" Nullable="false" />
           <Property Name="Quarter" Type="Int32" Nullable="false" />
-          <Property Name="COCR" Type="String" Nullable="false" />
-          <Property Name="PARQ" Type="String" Nullable="false" />
-          <Property Name="LALU" Type="String" Nullable="false" />
-          <Property Name="REXP" Type="String" Nullable="false" />
-          <Property Name="CCS" Type="String" Nullable="false" />
+          <Property Name="COCR" Type="Double" Nullable="true" />
+          <Property Name="PARQ" Type="Double" Nullable="true" />
+          <Property Name="LALU" Type="Double" Nullable="true" />
+          <Property Name="REXP" Type="Double" Nullable="true" />
+          <Property Name="CCS" Type="Double" Nullable="true" />
+          <Property Name="KDL" Type="Double" Nullable="true" />
+          <Property Name="SOY" Type="Double" Nullable="true" />
+          <Property Name="HHL" Type="Double" Nullable="true" />
+          <Property Name="SEYB" Type="Double" Nullable="true" />
+          <Property Name="CDB" Type="Double" Nullable="true" />
+          <Property Name="LFIN" Type="Double" Nullable="true" />
+          <Property Name="LWL" Type="Double" Nullable="true" />
+          <Property Name="CIND" Type="Double" Nullable="true" />
+          <Property Name="DIPD" Type="Double" Nullable="true" />
+          <Property Name="LOLC" Type="Double" Nullable="true" />
+          <Property Name="NDB" Type="Double" Nullable="true" />
+          <Property Name="ACL" Type="Double" Nullable="true" />
+          <Property Name="SAMP" Type="Double" Nullable="true" />
+          <Property Name="TPL" Type="Double" Nullable="true" />
+          <Property Name="CFIN" Type="Double" Nullable="true" />
+          <Property Name="RCL" Type="Double" Nullable="true" />
+          <Property Name="DIMO" Type="Double" Nullable="true" />
+          <Property Name="BLI" Type="Double" Nullable="true" />
+          <Property Name="REG" Type="Double" Nullable="true" />
+          <Property Name="ALUF" Type="Double" Nullable="true" />
+          <Property Name="ARPI" Type="Double" Nullable="true" />
+          <Property Name="HDFC" Type="Double" Nullable="true" />
+          <Property Name="COLO" Type="Double" Nullable="true" />
+          <Property Name="VFIN" Type="Double" Nullable="true" />
+          <Property Name="PMB" Type="Double" Nullable="true" />
+          <Property Name="CRL" Type="Double" Nullable="true" />
+          <Property Name="TJL" Type="Double" Nullable="true" />
+          <Property Name="GRAN" Type="Double" Nullable="true" />
+          <Property Name="TAFL" Type="Double" Nullable="true" />
+          <Property Name="UML" Type="Double" Nullable="true" />
+          <Property Name="HAYL" Type="Double" Nullable="true" />
+          <Property Name="AAIC" Type="Double" Nullable="true" />
+          <Property Name="HNB" Type="Double" Nullable="true" />
+          <Property Name="BRWN" Type="Double" Nullable="true" />
+          <Property Name="CIC" Type="Double" Nullable="true" />
+          <Property Name="DIST" Type="Double" Nullable="true" />
+          <Property Name="LION" Type="Double" Nullable="true" />
+          <Property Name="LGL" Type="Double" Nullable="true" />
+          <Property Name="NTB" Type="Double" Nullable="true" />
+          <Property Name="DFCC" Type="Double" Nullable="true" />
+          <Property Name="SUN" Type="Double" Nullable="true" />
+          <Property Name="LLUB" Type="Double" Nullable="true" />
+          <Property Name="TYRE" Type="Double" Nullable="true" />
+          <Property Name="ASIR" Type="Double" Nullable="true" />
+          <Property Name="CARG" Type="Double" Nullable="true" />
+          <Property Name="LHCL" Type="Double" Nullable="true" />
+          <Property Name="BFL" Type="Double" Nullable="true" />
+          <Property Name="NEST" Type="Double" Nullable="true" />
+          <Property Name="GUAR" Type="Double" Nullable="true" />
+          <Property Name="CTC" Type="Double" Nullable="true" />
+          <Property Name="KAPI" Type="Double" Nullable="true" />
+          <Property Name="JKH" Type="Double" Nullable="true" />
+          <Property Name="LIOC" Type="Double" Nullable="true" />
+          <Property Name="CLND" Type="Double" Nullable="true" />
+          <Property Name="AHUN" Type="Double" Nullable="true" />
+          <Property Name="TKYO" Type="Double" Nullable="true" />
+          <Property Name="SPEN" Type="Double" Nullable="true" />
+          <Property Name="COMB" Type="Double" Nullable="true" />
+          <Property Name="MELS" Type="Double" Nullable="true" />
+          <Property Name="SLTL" Type="Double" Nullable="true" />
+          <Property Name="CTHR" Type="Double" Nullable="true" />
+          <Property Name="CARS" Type="Double" Nullable="true" />
+          <Property Name="CINS" Type="Double" Nullable="true" />
+          <Property Name="AEL" Type="Double" Nullable="true" />
+          <Property Name="BUKI" Type="Double" Nullable="true" />
+          <Property Name="AHPL" Type="Double" Nullable="true" />
+          <Property Name="SINS" Type="Double" Nullable="true" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
-      <Mapping xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs" Space="C-S">
-        <Alias Key="Model" Value="AnalyzerDBModel" />
-        <Alias Key="Target" Value="AnalyzerDBModel.Store" />
-        <EntityContainerMapping CdmEntityContainer="AnalyzerDBContext" StorageEntityContainer="AnalyzerDBModelTargetContainer">
-        </EntityContainerMapping>
-      </Mapping>
-    </edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AnalyzerDBModelStoreContainer" CdmEntityContainer="AnalyzerDBContext">
+    <EntitySetMapping Name="T_Price">
+      <EntityTypeMapping TypeName="IsTypeOf(AnalyzerDBModel.T_Price)">
+        <MappingFragment StoreEntitySet="T_Price">
+          <ScalarProperty Name="OId" ColumnName="OId" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="Quarter" ColumnName="Quarter" />
+          <ScalarProperty Name="COCR" ColumnName="COCR" />
+          <ScalarProperty Name="PARQ" ColumnName="PARQ" />
+          <ScalarProperty Name="LALU" ColumnName="LALU" />
+          <ScalarProperty Name="REXP" ColumnName="REXP" />
+          <ScalarProperty Name="CCS" ColumnName="CCS" />
+          <ScalarProperty Name="KDL" ColumnName="KDL" />
+          <ScalarProperty Name="SOY" ColumnName="SOY" />
+          <ScalarProperty Name="HHL" ColumnName="HHL" />
+          <ScalarProperty Name="SEYB" ColumnName="SEYB" />
+          <ScalarProperty Name="CDB" ColumnName="CDB" />
+          <ScalarProperty Name="LFIN" ColumnName="LFIN" />
+          <ScalarProperty Name="LWL" ColumnName="LWL" />
+          <ScalarProperty Name="CIND" ColumnName="CIND" />
+          <ScalarProperty Name="DIPD" ColumnName="DIPD" />
+          <ScalarProperty Name="LOLC" ColumnName="LOLC" />
+          <ScalarProperty Name="NDB" ColumnName="NDB" />
+          <ScalarProperty Name="ACL" ColumnName="ACL" />
+          <ScalarProperty Name="SAMP" ColumnName="SAMP" />
+          <ScalarProperty Name="TPL" ColumnName="TPL" />
+          <ScalarProperty Name="CFIN" ColumnName="CFIN" />
+          <ScalarProperty Name="RCL" ColumnName="RCL" />
+          <ScalarProperty Name="DIMO" ColumnName="DIMO" />
+          <ScalarProperty Name="BLI" ColumnName="BLI" />
+          <ScalarProperty Name="REG" ColumnName="REG" />
+          <ScalarProperty Name="ALUF" ColumnName="ALUF" />
+          <ScalarProperty Name="ARPI" ColumnName="ARPI" />
+          <ScalarProperty Name="HDFC" ColumnName="HDFC" />
+          <ScalarProperty Name="COLO" ColumnName="COLO" />
+          <ScalarProperty Name="VFIN" ColumnName="VFIN" />
+          <ScalarProperty Name="PMB" ColumnName="PMB" />
+          <ScalarProperty Name="CRL" ColumnName="CRL" />
+          <ScalarProperty Name="TJL" ColumnName="TJL" />
+          <ScalarProperty Name="GRAN" ColumnName="GRAN" />
+          <ScalarProperty Name="TAFL" ColumnName="TAFL" />
+          <ScalarProperty Name="UML" ColumnName="UML" />
+          <ScalarProperty Name="HAYL" ColumnName="HAYL" />
+          <ScalarProperty Name="AAIC" ColumnName="AAIC" />
+          <ScalarProperty Name="HNB" ColumnName="HNB" />
+          <ScalarProperty Name="BRWN" ColumnName="BRWN" />
+          <ScalarProperty Name="CIC" ColumnName="CIC" />
+          <ScalarProperty Name="DIST" ColumnName="DIST" />
+          <ScalarProperty Name="LION" ColumnName="LION" />
+          <ScalarProperty Name="LGL" ColumnName="LGL" />
+          <ScalarProperty Name="NTB" ColumnName="NTB" />
+          <ScalarProperty Name="DFCC" ColumnName="DFCC" />
+          <ScalarProperty Name="SUN" ColumnName="SUN" />
+          <ScalarProperty Name="LLUB" ColumnName="LLUB" />
+          <ScalarProperty Name="TYRE" ColumnName="TYRE" />
+          <ScalarProperty Name="ASIR" ColumnName="ASIR" />
+          <ScalarProperty Name="CARG" ColumnName="CARG" />
+          <ScalarProperty Name="LHCL" ColumnName="LHCL" />
+          <ScalarProperty Name="BFL" ColumnName="BFL" />
+          <ScalarProperty Name="NEST" ColumnName="NEST" />
+          <ScalarProperty Name="GUAR" ColumnName="GUAR" />
+          <ScalarProperty Name="CTC" ColumnName="CTC" />
+          <ScalarProperty Name="KAPI" ColumnName="KAPI" />
+          <ScalarProperty Name="JKH" ColumnName="JKH" />
+          <ScalarProperty Name="LIOC" ColumnName="LIOC" />
+          <ScalarProperty Name="CLND" ColumnName="CLND" />
+          <ScalarProperty Name="AHUN" ColumnName="AHUN" />
+          <ScalarProperty Name="TKYO" ColumnName="TKYO" />
+          <ScalarProperty Name="SPEN" ColumnName="SPEN" />
+          <ScalarProperty Name="COMB" ColumnName="COMB" />
+          <ScalarProperty Name="MELS" ColumnName="MELS" />
+          <ScalarProperty Name="SLTL" ColumnName="SLTL" />
+          <ScalarProperty Name="CTHR" ColumnName="CTHR" />
+          <ScalarProperty Name="CARS" ColumnName="CARS" />
+          <ScalarProperty Name="CINS" ColumnName="CINS" />
+          <ScalarProperty Name="AEL" ColumnName="AEL" />
+          <ScalarProperty Name="BUKI" ColumnName="BUKI" />
+          <ScalarProperty Name="AHPL" ColumnName="AHPL" />
+          <ScalarProperty Name="SINS" ColumnName="SINS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_EPS">
+      <EntityTypeMapping TypeName="IsTypeOf(AnalyzerDBModel.T_EPS)">
+        <MappingFragment StoreEntitySet="T_EPS">
+          <ScalarProperty Name="OId" ColumnName="OId" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="Quarter" ColumnName="Quarter" />
+          <ScalarProperty Name="COCR" ColumnName="COCR" />
+          <ScalarProperty Name="PARQ" ColumnName="PARQ" />
+          <ScalarProperty Name="LALU" ColumnName="LALU" />
+          <ScalarProperty Name="REXP" ColumnName="REXP" />
+          <ScalarProperty Name="CCS" ColumnName="CCS" />
+          <ScalarProperty Name="KDL" ColumnName="KDL" />
+          <ScalarProperty Name="SOY" ColumnName="SOY" />
+          <ScalarProperty Name="HHL" ColumnName="HHL" />
+          <ScalarProperty Name="SEYB" ColumnName="SEYB" />
+          <ScalarProperty Name="CDB" ColumnName="CDB" />
+          <ScalarProperty Name="LFIN" ColumnName="LFIN" />
+          <ScalarProperty Name="LWL" ColumnName="LWL" />
+          <ScalarProperty Name="CIND" ColumnName="CIND" />
+          <ScalarProperty Name="DIPD" ColumnName="DIPD" />
+          <ScalarProperty Name="LOLC" ColumnName="LOLC" />
+          <ScalarProperty Name="NDB" ColumnName="NDB" />
+          <ScalarProperty Name="ACL" ColumnName="ACL" />
+          <ScalarProperty Name="SAMP" ColumnName="SAMP" />
+          <ScalarProperty Name="TPL" ColumnName="TPL" />
+          <ScalarProperty Name="CFIN" ColumnName="CFIN" />
+          <ScalarProperty Name="RCL" ColumnName="RCL" />
+          <ScalarProperty Name="DIMO" ColumnName="DIMO" />
+          <ScalarProperty Name="BLI" ColumnName="BLI" />
+          <ScalarProperty Name="REG" ColumnName="REG" />
+          <ScalarProperty Name="ALUF" ColumnName="ALUF" />
+          <ScalarProperty Name="ARPI" ColumnName="ARPI" />
+          <ScalarProperty Name="HDFC" ColumnName="HDFC" />
+          <ScalarProperty Name="COLO" ColumnName="COLO" />
+          <ScalarProperty Name="VFIN" ColumnName="VFIN" />
+          <ScalarProperty Name="PMB" ColumnName="PMB" />
+          <ScalarProperty Name="CRL" ColumnName="CRL" />
+          <ScalarProperty Name="TJL" ColumnName="TJL" />
+          <ScalarProperty Name="GRAN" ColumnName="GRAN" />
+          <ScalarProperty Name="TAFL" ColumnName="TAFL" />
+          <ScalarProperty Name="UML" ColumnName="UML" />
+          <ScalarProperty Name="HAYL" ColumnName="HAYL" />
+          <ScalarProperty Name="AAIC" ColumnName="AAIC" />
+          <ScalarProperty Name="HNB" ColumnName="HNB" />
+          <ScalarProperty Name="BRWN" ColumnName="BRWN" />
+          <ScalarProperty Name="CIC" ColumnName="CIC" />
+          <ScalarProperty Name="DIST" ColumnName="DIST" />
+          <ScalarProperty Name="LION" ColumnName="LION" />
+          <ScalarProperty Name="LGL" ColumnName="LGL" />
+          <ScalarProperty Name="NTB" ColumnName="NTB" />
+          <ScalarProperty Name="DFCC" ColumnName="DFCC" />
+          <ScalarProperty Name="SUN" ColumnName="SUN" />
+          <ScalarProperty Name="LLUB" ColumnName="LLUB" />
+          <ScalarProperty Name="TYRE" ColumnName="TYRE" />
+          <ScalarProperty Name="ASIR" ColumnName="ASIR" />
+          <ScalarProperty Name="CARG" ColumnName="CARG" />
+          <ScalarProperty Name="LHCL" ColumnName="LHCL" />
+          <ScalarProperty Name="BFL" ColumnName="BFL" />
+          <ScalarProperty Name="NEST" ColumnName="NEST" />
+          <ScalarProperty Name="GUAR" ColumnName="GUAR" />
+          <ScalarProperty Name="CTC" ColumnName="CTC" />
+          <ScalarProperty Name="KAPI" ColumnName="KAPI" />
+          <ScalarProperty Name="JKH" ColumnName="JKH" />
+          <ScalarProperty Name="LIOC" ColumnName="LIOC" />
+          <ScalarProperty Name="CLND" ColumnName="CLND" />
+          <ScalarProperty Name="AHUN" ColumnName="AHUN" />
+          <ScalarProperty Name="TKYO" ColumnName="TKYO" />
+          <ScalarProperty Name="SPEN" ColumnName="SPEN" />
+          <ScalarProperty Name="COMB" ColumnName="COMB" />
+          <ScalarProperty Name="MELS" ColumnName="MELS" />
+          <ScalarProperty Name="SLTL" ColumnName="SLTL" />
+          <ScalarProperty Name="CTHR" ColumnName="CTHR" />
+          <ScalarProperty Name="CARS" ColumnName="CARS" />
+          <ScalarProperty Name="CINS" ColumnName="CINS" />
+          <ScalarProperty Name="AEL" ColumnName="AEL" />
+          <ScalarProperty Name="BUKI" ColumnName="BUKI" />
+          <ScalarProperty Name="AHPL" ColumnName="AHPL" />
+          <ScalarProperty Name="SINS" ColumnName="SINS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_EPS_Audited">
+      <EntityTypeMapping TypeName="IsTypeOf(AnalyzerDBModel.T_EPS_Audited)">
+        <MappingFragment StoreEntitySet="T_EPS_Audited">
+          <ScalarProperty Name="OId" ColumnName="OId" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="Quarter" ColumnName="Quarter" />
+          <ScalarProperty Name="COCR" ColumnName="COCR" />
+          <ScalarProperty Name="PARQ" ColumnName="PARQ" />
+          <ScalarProperty Name="LALU" ColumnName="LALU" />
+          <ScalarProperty Name="REXP" ColumnName="REXP" />
+          <ScalarProperty Name="CCS" ColumnName="CCS" />
+          <ScalarProperty Name="KDL" ColumnName="KDL" />
+          <ScalarProperty Name="SOY" ColumnName="SOY" />
+          <ScalarProperty Name="HHL" ColumnName="HHL" />
+          <ScalarProperty Name="SEYB" ColumnName="SEYB" />
+          <ScalarProperty Name="CDB" ColumnName="CDB" />
+          <ScalarProperty Name="LFIN" ColumnName="LFIN" />
+          <ScalarProperty Name="LWL" ColumnName="LWL" />
+          <ScalarProperty Name="CIND" ColumnName="CIND" />
+          <ScalarProperty Name="DIPD" ColumnName="DIPD" />
+          <ScalarProperty Name="LOLC" ColumnName="LOLC" />
+          <ScalarProperty Name="NDB" ColumnName="NDB" />
+          <ScalarProperty Name="ACL" ColumnName="ACL" />
+          <ScalarProperty Name="SAMP" ColumnName="SAMP" />
+          <ScalarProperty Name="TPL" ColumnName="TPL" />
+          <ScalarProperty Name="CFIN" ColumnName="CFIN" />
+          <ScalarProperty Name="RCL" ColumnName="RCL" />
+          <ScalarProperty Name="DIMO" ColumnName="DIMO" />
+          <ScalarProperty Name="BLI" ColumnName="BLI" />
+          <ScalarProperty Name="REG" ColumnName="REG" />
+          <ScalarProperty Name="ALUF" ColumnName="ALUF" />
+          <ScalarProperty Name="ARPI" ColumnName="ARPI" />
+          <ScalarProperty Name="HDFC" ColumnName="HDFC" />
+          <ScalarProperty Name="COLO" ColumnName="COLO" />
+          <ScalarProperty Name="VFIN" ColumnName="VFIN" />
+          <ScalarProperty Name="PMB" ColumnName="PMB" />
+          <ScalarProperty Name="CRL" ColumnName="CRL" />
+          <ScalarProperty Name="TJL" ColumnName="TJL" />
+          <ScalarProperty Name="GRAN" ColumnName="GRAN" />
+          <ScalarProperty Name="TAFL" ColumnName="TAFL" />
+          <ScalarProperty Name="UML" ColumnName="UML" />
+          <ScalarProperty Name="HAYL" ColumnName="HAYL" />
+          <ScalarProperty Name="AAIC" ColumnName="AAIC" />
+          <ScalarProperty Name="HNB" ColumnName="HNB" />
+          <ScalarProperty Name="BRWN" ColumnName="BRWN" />
+          <ScalarProperty Name="CIC" ColumnName="CIC" />
+          <ScalarProperty Name="DIST" ColumnName="DIST" />
+          <ScalarProperty Name="LION" ColumnName="LION" />
+          <ScalarProperty Name="LGL" ColumnName="LGL" />
+          <ScalarProperty Name="NTB" ColumnName="NTB" />
+          <ScalarProperty Name="DFCC" ColumnName="DFCC" />
+          <ScalarProperty Name="SUN" ColumnName="SUN" />
+          <ScalarProperty Name="LLUB" ColumnName="LLUB" />
+          <ScalarProperty Name="TYRE" ColumnName="TYRE" />
+          <ScalarProperty Name="ASIR" ColumnName="ASIR" />
+          <ScalarProperty Name="CARG" ColumnName="CARG" />
+          <ScalarProperty Name="LHCL" ColumnName="LHCL" />
+          <ScalarProperty Name="BFL" ColumnName="BFL" />
+          <ScalarProperty Name="NEST" ColumnName="NEST" />
+          <ScalarProperty Name="GUAR" ColumnName="GUAR" />
+          <ScalarProperty Name="CTC" ColumnName="CTC" />
+          <ScalarProperty Name="KAPI" ColumnName="KAPI" />
+          <ScalarProperty Name="JKH" ColumnName="JKH" />
+          <ScalarProperty Name="LIOC" ColumnName="LIOC" />
+          <ScalarProperty Name="CLND" ColumnName="CLND" />
+          <ScalarProperty Name="AHUN" ColumnName="AHUN" />
+          <ScalarProperty Name="TKYO" ColumnName="TKYO" />
+          <ScalarProperty Name="SPEN" ColumnName="SPEN" />
+          <ScalarProperty Name="COMB" ColumnName="COMB" />
+          <ScalarProperty Name="MELS" ColumnName="MELS" />
+          <ScalarProperty Name="SLTL" ColumnName="SLTL" />
+          <ScalarProperty Name="CTHR" ColumnName="CTHR" />
+          <ScalarProperty Name="CARS" ColumnName="CARS" />
+          <ScalarProperty Name="CINS" ColumnName="CINS" />
+          <ScalarProperty Name="AEL" ColumnName="AEL" />
+          <ScalarProperty Name="BUKI" ColumnName="BUKI" />
+          <ScalarProperty Name="AHPL" ColumnName="AHPL" />
+          <ScalarProperty Name="SINS" ColumnName="SINS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
   </edmx:Runtime>
   <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
@@ -80,6 +763,7 @@
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
         <DesignerProperty Name="EnablePluralization" Value="True" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
       </DesignerInfoPropertySet>
     </edmx:Options>
     <!-- Diagram content (shape and connector positions) -->

@@ -48,5 +48,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Analyzer.Data\Analyzer.Data.csproj">
+      <Project>{866a546f-b360-4f85-8672-735b7abfb370}</Project>
+      <Name>Analyzer.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
